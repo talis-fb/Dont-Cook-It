@@ -7,7 +7,8 @@
 script = ExtResource("1_4yve6")
 name = "Frango"
 texture = ExtResource("2_wr4p1")
-raw_tasty = -3
+raw_tasty = -25
+cooking_tasty = Array[Vector2]([Vector2(5, -4), Vector2(10, 3), Vector2(20, 13), Vector2(30, 15), Vector2(35, 13), Vector2(45, 4), Vector2(60, -13)])
 calories = 0
 fat = 0
 carbohydrate = 0

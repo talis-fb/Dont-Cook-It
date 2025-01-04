@@ -14,6 +14,7 @@ size = Vector2(332, 55)
 script = ExtResource("1_u358w")
 
 [node name="Timer" type="Timer" parent="."]
+wait_time = 1.5
 autostart = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

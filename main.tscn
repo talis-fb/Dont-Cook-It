@@ -22,7 +22,7 @@ script = ExtResource("9_drntk")
 position = Vector2(-26.24, -89)
 
 [node name="Timer" type="Timer" parent="Area comandas"]
-wait_time = 2.0
+wait_time = 10.0
 autostart = true
 
 [node name="Spawners" type="Node2D" parent="."]
