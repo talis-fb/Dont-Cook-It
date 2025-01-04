@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://wej27gmwpqj3"]
+[gd_scene load_steps=5 format=3 uid="uid://wej27gmwpqj3"]
 
 [ext_resource type="Script" path="res://sprite_food.gd" id="1_ufqn5"]
 
@@ -9,6 +9,13 @@ outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_idobv"]
 font_size = 15
+font_color = Color(0.0235294, 0.858824, 1, 1)
+outline_size = 7
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_40nci"]
+font_size = 15
+font_color = Color(1, 0.0705882, 0.0313726, 1)
 outline_size = 7
 outline_color = Color(0, 0, 0, 1)
 
@@ -30,6 +37,28 @@ offset_left = -60.0
 offset_top = -36.0
 offset_right = 61.0
 offset_bottom = 4.0
+text = "Pontos de Sabor"
+label_settings = SubResource("LabelSettings_idobv")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Cooking" type="Label" parent="."]
+visible = false
+offset_left = -40.0
+offset_top = 14.0
+offset_right = 38.0
+offset_bottom = 44.0
+text = "Cozimento"
+label_settings = SubResource("LabelSettings_40nci")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TastyList" type="Label" parent="."]
+visible = false
+offset_left = -59.0
+offset_top = 27.0
+offset_right = 59.0
+offset_bottom = 67.0
 text = "Pontos de Sabor"
 label_settings = SubResource("LabelSettings_idobv")
 horizontal_alignment = 1

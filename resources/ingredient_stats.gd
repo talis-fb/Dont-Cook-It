@@ -4,8 +4,19 @@ extends Resource
 @export var name: String
 @export var texture: Texture2D
 
+
 # Sabor (base da pontuação)
 @export var raw_tasty: int
+
+# Pontos que definem o tasty real pelo valor de cozimento, a partir desses pontos 
+#  é retirado uma função afim para cada intervalo que define os valores de tasty entre eles
+#
+#  Se assume que quando cooking é zero, o tasty seja o "raw_tasty"
+#  (x,y) 
+#    x = valor de "cooking"
+#    y = valor real do "tasty"
+@export var cooking_tasty: Array[Vector2]
+
 
 # Informações nutricional
 @export var calories: int
