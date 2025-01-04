@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://dc1jbj3j503no"]
+[gd_scene load_steps=7 format=3 uid="uid://dc1jbj3j503no"]
 
 [ext_resource type="Script" path="res://scenes/comanda.gd" id="1_mc137"]
 [ext_resource type="Script" path="res://food.gd" id="2_km0cq"]
 [ext_resource type="Script" path="res://components/dropable.gd" id="2_lx6tn"]
+[ext_resource type="Script" path="res://components/ShowOnHoverDrop.gd" id="3_j3aqv"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_1xetn"]
 outline_size = 3
@@ -18,15 +19,6 @@ script = ExtResource("1_mc137")
 color = Color(1, 0.0980392, 0.411765, 1)
 polygon = PackedVector2Array(-17, -18, 16, -18, 15, 23, -17, 23)
 
-[node name="ColorRect" type="ColorRect" parent="."]
-visible = false
-offset_left = -14.0
-offset_top = -13.0
-offset_right = 12.0
-offset_bottom = 18.0
-mouse_filter = 2
-color = Color(1, 1, 1, 0.517647)
-
 [node name="Label" type="Label" parent="."]
 offset_left = -37.0
 offset_top = -40.0
@@ -37,6 +29,18 @@ label_settings = SubResource("LabelSettings_1xetn")
 
 [node name="EmptyFood" type="Node" parent="."]
 script = ExtResource("2_km0cq")
+
+[node name="ShowOnHoverDrop" type="Node2D" parent="." node_paths=PackedStringArray("dropable")]
+script = ExtResource("3_j3aqv")
+dropable = NodePath("../Dropable")
+
+[node name="ColorRect" type="ColorRect" parent="ShowOnHoverDrop"]
+offset_left = -14.0
+offset_top = -13.0
+offset_right = 12.0
+offset_bottom = 18.0
+mouse_filter = 2
+color = Color(1, 1, 1, 0.517647)
 
 [node name="Dropable" type="Node2D" parent="." node_paths=PackedStringArray("area_dropable")]
 script = ExtResource("2_lx6tn")

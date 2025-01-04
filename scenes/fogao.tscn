@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://c5oxu6cckfg6r"]
+[gd_scene load_steps=9 format=3 uid="uid://c5oxu6cckfg6r"]
 
 [ext_resource type="Texture2D" uid="uid://d37170mtitesn" path="res://resources/sprites/icon.svg" id="1_b1scy"]
 [ext_resource type="Script" path="res://scenes/fogao.gd" id="1_u358w"]
 [ext_resource type="Script" path="res://components/draggable.gd" id="2_h16bj"]
 [ext_resource type="PackedScene" uid="uid://wej27gmwpqj3" path="res://scenes/SpriteFood.tscn" id="3_gv3ho"]
 [ext_resource type="Script" path="res://components/dropable.gd" id="3_vetcc"]
+[ext_resource type="Script" path="res://components/ShowOnHoverDrop.gd" id="4_qa0av"]
 [ext_resource type="Script" path="res://food.gd" id="6_ywhwy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ck5i7"]
@@ -32,8 +33,12 @@ food = NodePath("../Food")
 position = Vector2(3.5, -0.5)
 shape = SubResource("RectangleShape2D_ck5i7")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ShowOnHoverDrop" type="Node2D" parent="." node_paths=PackedStringArray("dropable")]
 visible = false
+script = ExtResource("4_qa0av")
+dropable = NodePath("../Dropable")
+
+[node name="ColorRect" type="ColorRect" parent="ShowOnHoverDrop"]
 offset_left = -41.0
 offset_top = -20.0
 offset_right = 49.0

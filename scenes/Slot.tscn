@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://duo17cmdjk3if"]
+[gd_scene load_steps=9 format=3 uid="uid://duo17cmdjk3if"]
 
 [ext_resource type="Texture2D" uid="uid://d37170mtitesn" path="res://resources/sprites/icon.svg" id="1_qtbm1"]
 [ext_resource type="Script" path="res://slot.gd" id="1_y5hud"]
+[ext_resource type="Script" path="res://components/ShowOnHoverDrop.gd" id="3_roa28"]
 [ext_resource type="PackedScene" uid="uid://wej27gmwpqj3" path="res://scenes/SpriteFood.tscn" id="3_vammb"]
 [ext_resource type="Script" path="res://food.gd" id="4_yl643"]
 [ext_resource type="Script" path="res://components/dropable.gd" id="5_5ef6n"]
@@ -21,8 +22,12 @@ shape = SubResource("RectangleShape2D_jf6bb")
 modulate = Color(0, 0, 0, 1)
 texture = ExtResource("1_qtbm1")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ShowOnHoverDrop" type="Node2D" parent="." node_paths=PackedStringArray("dropable")]
 visible = false
+script = ExtResource("3_roa28")
+dropable = NodePath("../Dropable")
+
+[node name="ColorRect" type="ColorRect" parent="ShowOnHoverDrop"]
 offset_left = -57.0
 offset_top = -60.0
 offset_right = 58.0

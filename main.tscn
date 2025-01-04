@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bw8nkwe3gtfl2"]
+[gd_scene load_steps=12 format=3 uid="uid://bw8nkwe3gtfl2"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_0pq3u"]
 [ext_resource type="PackedScene" uid="uid://br5tdebhjvjti" path="res://scenes/creator_ingredient.tscn" id="1_083bv"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://c5oxu6cckfg6r" path="res://scenes/fogao.tscn" id="7_x77sw"]
 [ext_resource type="PackedScene" uid="uid://dc1jbj3j503no" path="res://scenes/comanda.tscn" id="9_cd6eh"]
 [ext_resource type="Script" path="res://area_comandas.gd" id="9_drntk"]
+[ext_resource type="PackedScene" uid="uid://dmkjrgmyeysjb" path="res://scenes/lixo.tscn" id="11_o148a"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_0pq3u")
@@ -75,6 +76,9 @@ position = Vector2(552, 69)
 
 [node name="Fogao3" parent="Fogões" instance=ExtResource("7_x77sw")]
 position = Vector2(696, 71)
+
+[node name="Lixo" parent="." instance=ExtResource("11_o148a")]
+position = Vector2(1067, 564)
 
 [node name="Dragging" parent="." instance=ExtResource("3_4vlif")]
 
