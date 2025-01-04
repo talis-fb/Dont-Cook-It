@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bw8nkwe3gtfl2"]
+[gd_scene load_steps=11 format=3 uid="uid://bw8nkwe3gtfl2"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_0pq3u"]
 [ext_resource type="PackedScene" uid="uid://br5tdebhjvjti" path="res://scenes/creator_ingredient.tscn" id="1_083bv"]
@@ -8,9 +8,22 @@
 [ext_resource type="PackedScene" uid="uid://duo17cmdjk3if" path="res://scenes/Slot.tscn" id="5_eb8wl"]
 [ext_resource type="Resource" uid="uid://dk4tlri6e884x" path="res://resources/ingredient_stats/queijo.tres" id="5_tm5jr"]
 [ext_resource type="PackedScene" uid="uid://c5oxu6cckfg6r" path="res://scenes/fogao.tscn" id="7_x77sw"]
+[ext_resource type="PackedScene" uid="uid://dc1jbj3j503no" path="res://scenes/comanda.tscn" id="9_cd6eh"]
+[ext_resource type="Script" path="res://area_comandas.gd" id="9_drntk"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_0pq3u")
+
+[node name="Area comandas" type="Node2D" parent="."]
+position = Vector2(65, 138)
+script = ExtResource("9_drntk")
+
+[node name="Comanda" parent="Area comandas" instance=ExtResource("9_cd6eh")]
+position = Vector2(-26.24, -89)
+
+[node name="Timer" type="Timer" parent="Area comandas"]
+wait_time = 2.0
+autostart = true
 
 [node name="Spawners" type="Node2D" parent="."]
 
@@ -53,6 +66,8 @@ position = Vector2(482, 217)
 position = Vector2(330, 217)
 
 [node name="Fogao" parent="." instance=ExtResource("7_x77sw")]
-position = Vector2(553, 62)
+position = Vector2(601, 71)
 
 [node name="Dragging" parent="." instance=ExtResource("3_4vlif")]
+
+[connection signal="timeout" from="Area comandas/Timer" to="Area comandas" method="_on_timer_timeout"]

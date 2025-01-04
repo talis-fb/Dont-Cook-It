@@ -1,0 +1,53 @@
+[gd_scene load_steps=6 format=3 uid="uid://dc1jbj3j503no"]
+
+[ext_resource type="Script" path="res://scenes/comanda.gd" id="1_mc137"]
+[ext_resource type="Script" path="res://food.gd" id="2_km0cq"]
+[ext_resource type="Script" path="res://components/dropable.gd" id="2_lx6tn"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_1xetn"]
+outline_size = 3
+outline_color = Color(0.0142752, 0.0142752, 0.0142752, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rxami"]
+size = Vector2(31, 37)
+
+[node name="Comanda" type="Node2D"]
+script = ExtResource("1_mc137")
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+color = Color(1, 0.0980392, 0.411765, 1)
+polygon = PackedVector2Array(-17, -18, 16, -18, 15, 23, -17, 23)
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+offset_left = -14.0
+offset_top = -13.0
+offset_right = 12.0
+offset_bottom = 18.0
+mouse_filter = 2
+color = Color(1, 1, 1, 0.517647)
+
+[node name="Label" type="Label" parent="."]
+offset_left = -37.0
+offset_top = -40.0
+offset_right = 37.0
+offset_bottom = -17.0
+text = "Comanda"
+label_settings = SubResource("LabelSettings_1xetn")
+
+[node name="EmptyFood" type="Node" parent="."]
+script = ExtResource("2_km0cq")
+
+[node name="Dropable" type="Node2D" parent="." node_paths=PackedStringArray("area_dropable")]
+script = ExtResource("2_lx6tn")
+area_dropable = NodePath("../Area2D")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-0.5, 2.5)
+shape = SubResource("RectangleShape2D_rxami")
+
+[connection signal="drag_item_entered" from="Dropable" to="." method="_on_dropable_drag_item_entered"]
+[connection signal="drag_item_exited" from="Dropable" to="." method="_on_dropable_drag_item_exited"]
+[connection signal="dropped" from="Dropable" to="." method="_on_dropable_dropped"]

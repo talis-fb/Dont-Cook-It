@@ -44,9 +44,9 @@ script = ExtResource("2_h16bj")
 food = NodePath("../Food")
 area_draggable = NodePath("../Area2D")
 
-[node name="Dropable" type="Node2D" parent="." node_paths=PackedStringArray("food", "area_dropable")]
+[node name="Dropable" type="Node2D" parent="." node_paths=PackedStringArray("food_to_ignore", "area_dropable")]
 script = ExtResource("3_vetcc")
-food = NodePath("../Food")
+food_to_ignore = NodePath("../Food")
 area_dropable = NodePath("../Area2D")
 
 [node name="Food" type="Node" parent="."]

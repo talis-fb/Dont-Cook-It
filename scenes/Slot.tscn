@@ -36,9 +36,9 @@ food = NodePath("../Food")
 [node name="Food" type="Node" parent="."]
 script = ExtResource("4_yl643")
 
-[node name="Dropable" type="Node2D" parent="." node_paths=PackedStringArray("food", "area_dropable")]
+[node name="Dropable" type="Node2D" parent="." node_paths=PackedStringArray("food_to_ignore", "area_dropable")]
 script = ExtResource("5_5ef6n")
-food = NodePath("../Food")
+food_to_ignore = NodePath("../Food")
 area_dropable = NodePath("..")
 
 [node name="Draggable" type="Node2D" parent="." node_paths=PackedStringArray("food", "area_draggable")]
@@ -47,8 +47,8 @@ food = NodePath("../Food")
 area_draggable = NodePath("..")
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]
-[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered2"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
 [connection signal="drag_item_entered" from="Dropable" to="." method="_on_dropable_drag_item_entered"]
 [connection signal="drag_item_exited" from="Dropable" to="." method="_on_dropable_drag_item_exited"]
