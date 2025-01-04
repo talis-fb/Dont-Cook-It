@@ -8,7 +8,7 @@
 [ext_resource type="Script" path="res://food.gd" id="6_ywhwy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ck5i7"]
-size = Vector2(332, 55)
+size = Vector2(119, 55)
 
 [node name="Fogao" type="Node2D"]
 script = ExtResource("1_u358w")
@@ -19,7 +19,8 @@ autostart = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 modulate = Color(1, 0.356863, 0.262745, 1)
-scale = Vector2(3.01562, 0.445312)
+position = Vector2(4, 0)
+scale = Vector2(0.94531, 0.445312)
 texture = ExtResource("1_b1scy")
 
 [node name="SpriteFood" parent="." node_paths=PackedStringArray("food") instance=ExtResource("3_gv3ho")]
@@ -28,15 +29,15 @@ food = NodePath("../Food")
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(0, -0.5)
+position = Vector2(3.5, -0.5)
 shape = SubResource("RectangleShape2D_ck5i7")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 visible = false
-offset_left = -23.0
-offset_top = -21.0
-offset_right = 17.0
-offset_bottom = 19.0
+offset_left = -41.0
+offset_top = -20.0
+offset_right = 49.0
+offset_bottom = 20.0
 mouse_filter = 2
 color = Color(0.823529, 0.0705882, 1, 0.478431)
 
