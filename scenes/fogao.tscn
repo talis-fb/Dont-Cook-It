@@ -1,0 +1,59 @@
+[gd_scene load_steps=8 format=3 uid="uid://c5oxu6cckfg6r"]
+
+[ext_resource type="Texture2D" uid="uid://d37170mtitesn" path="res://resources/sprites/icon.svg" id="1_b1scy"]
+[ext_resource type="Script" path="res://scenes/fogao.gd" id="1_u358w"]
+[ext_resource type="Script" path="res://components/draggable.gd" id="2_h16bj"]
+[ext_resource type="PackedScene" uid="uid://wej27gmwpqj3" path="res://scenes/SpriteFood.tscn" id="3_gv3ho"]
+[ext_resource type="Script" path="res://components/dropable.gd" id="3_vetcc"]
+[ext_resource type="Script" path="res://food.gd" id="6_ywhwy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ck5i7"]
+size = Vector2(332, 55)
+
+[node name="Fogao" type="Node2D"]
+script = ExtResource("1_u358w")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(1, 0.356863, 0.262745, 1)
+scale = Vector2(3.01562, 0.445312)
+texture = ExtResource("1_b1scy")
+
+[node name="SpriteFood" parent="." node_paths=PackedStringArray("food") instance=ExtResource("3_gv3ho")]
+food = NodePath("../Food")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_ck5i7")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+offset_left = -23.0
+offset_top = -21.0
+offset_right = 17.0
+offset_bottom = 19.0
+mouse_filter = 2
+color = Color(0.823529, 0.0705882, 1, 0.478431)
+
+[node name="Draggable" type="Node2D" parent="." node_paths=PackedStringArray("food", "area_draggable")]
+script = ExtResource("2_h16bj")
+food = NodePath("../Food")
+area_draggable = NodePath("../Area2D")
+
+[node name="Dropable" type="Node2D" parent="." node_paths=PackedStringArray("food", "area_dropable")]
+script = ExtResource("3_vetcc")
+food = NodePath("../Food")
+area_dropable = NodePath("../Area2D")
+
+[node name="Food" type="Node" parent="."]
+script = ExtResource("6_ywhwy")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="finish" from="Draggable" to="." method="_on_draggable_finish"]
+[connection signal="drag_item_entered" from="Dropable" to="." method="_on_dropable_drag_item_entered"]
+[connection signal="drag_item_exited" from="Dropable" to="." method="_on_dropable_drag_item_exited"]
+[connection signal="dropped" from="Dropable" to="." method="_on_dropable_dropped"]

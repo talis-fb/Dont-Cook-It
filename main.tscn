@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bw8nkwe3gtfl2"]
+[gd_scene load_steps=9 format=3 uid="uid://bw8nkwe3gtfl2"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_0pq3u"]
 [ext_resource type="PackedScene" uid="uid://br5tdebhjvjti" path="res://scenes/creator_ingredient.tscn" id="1_083bv"]
@@ -7,6 +7,7 @@
 [ext_resource type="Resource" uid="uid://mumwpjet00f5" path="res://resources/ingredient_stats/batata.tres" id="4_gwnhl"]
 [ext_resource type="PackedScene" uid="uid://duo17cmdjk3if" path="res://scenes/Slot.tscn" id="5_eb8wl"]
 [ext_resource type="Resource" uid="uid://dk4tlri6e884x" path="res://resources/ingredient_stats/queijo.tres" id="5_tm5jr"]
+[ext_resource type="PackedScene" uid="uid://c5oxu6cckfg6r" path="res://scenes/fogao.tscn" id="7_x77sw"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_0pq3u")
@@ -50,5 +51,8 @@ position = Vector2(482, 217)
 
 [node name="Slot1" parent="Slots" instance=ExtResource("5_eb8wl")]
 position = Vector2(330, 217)
+
+[node name="Fogao" parent="." instance=ExtResource("7_x77sw")]
+position = Vector2(553, 62)
 
 [node name="Dragging" parent="." instance=ExtResource("3_4vlif")]

@@ -7,7 +7,7 @@
 script = ExtResource("1_0gyqy")
 name = "Quejo"
 texture = ExtResource("2_ofnfs")
-raw_tasty = 0
+raw_tasty = 5
 calories = 0
 fat = 0
 carbohydrate = 0

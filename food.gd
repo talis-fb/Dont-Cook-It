@@ -22,3 +22,8 @@ func combine(new_food: Food):
 
 func clear():
 	ingredients.clear()
+
+func clone() -> Food:
+	var new_food := Food.new()
+	new_food.ingredients = self.ingredients.duplicate(true)
+	return new_food

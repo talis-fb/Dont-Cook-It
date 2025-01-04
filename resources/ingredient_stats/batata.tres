@@ -7,7 +7,7 @@
 script = ExtResource("1_sg7gl")
 name = "Batata"
 texture = ExtResource("2_tkarx")
-raw_tasty = 0
+raw_tasty = 1
 calories = 0
 fat = 0
 carbohydrate = 0

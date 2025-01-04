@@ -17,13 +17,13 @@ func start(food: Food):
 	start_dragging.emit(food)
 
 func cancel() -> Food:
-	var new_food = self.dragging_food.duplicate()
+	var new_food = self.dragging_food.clone()
 	self.dragging_food = null
 	cancel_dragging.emit(new_food)
 	return new_food
 
 func finish() -> Food:
-	var new_food = self.dragging_food.duplicate()
+	var new_food = self.dragging_food.clone()
 	self.dragging_food = null
 	finish_dragging.emit(new_food)
 	return new_food

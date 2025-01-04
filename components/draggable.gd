@@ -1,3 +1,4 @@
+class_name Draggable
 extends Node2D
 
 signal start(food: Food)
@@ -7,7 +8,7 @@ signal finish(food: Food)
 @export var food: Food
 @export var area_draggable: Area2D
 
-func _ready() -> void:
+func setup() -> void:
 	area_draggable.input_event.connect(_on_area_input_event)
 
 func _on_area_input_event(viewport: Node, event: InputEvent, shape_idx: int):

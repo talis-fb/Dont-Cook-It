@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://d37170mtitesn" path="res://resources/sprites/icon.svg" id="1_71htf"]
 [ext_resource type="Script" path="res://creator_ingredient.gd" id="1_tne31"]
-[ext_resource type="PackedScene" uid="uid://0lgraw2k1f3m" path="res://scenes/draggable.tscn" id="3_iupvi"]
+[ext_resource type="Script" path="res://components/draggable.gd" id="3_203rj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8psc2"]
 size = Vector2(124, 127)
@@ -21,7 +21,8 @@ position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_8psc2")
 debug_color = Color(0, 0.101961, 0.2, 1)
 
-[node name="Draggable" parent="." node_paths=PackedStringArray("area_draggable") instance=ExtResource("3_iupvi")]
+[node name="Draggable" type="Node2D" parent="." node_paths=PackedStringArray("area_draggable")]
+script = ExtResource("3_203rj")
 area_draggable = NodePath("..")
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]

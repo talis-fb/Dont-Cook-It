@@ -12,6 +12,7 @@ var food: Food:
 
 func _ready() -> void:
 	food = spawn_ingredient.to_food_entity()
+	$Draggable.setup()
 
 func _on_draggable_start(food: Food) -> void:
-	new_food.emit(food)
+	new_food.emit(food.clone())
