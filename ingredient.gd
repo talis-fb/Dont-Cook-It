@@ -7,8 +7,17 @@ extends Node
 # PRIVATE
 @export var _ingredient_stats: IngredientStats
 
-func _init(_ingredient_stats: IngredientStats):
-	self._ingredient_stats = _ingredient_stats
+func set_ingredient_stats(ingredient_stats: IngredientStats):
+	_ingredient_stats = ingredient_stats
+
+func set_cooking(cooking: int):
+	_cooking = cooking
+
+func clone() -> Ingredient:
+	var new_ingredient = Ingredient.new()
+	new_ingredient.set_cooking(_cooking)
+	new_ingredient.set_ingredient_stats(_ingredient_stats)
+	return new_ingredient
 
 func increase_cooking(n: int):
 	_cooking += n

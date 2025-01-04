@@ -24,6 +24,10 @@ func clear():
 	ingredients.clear()
 
 func clone() -> Food:
+	var cloned_ingredients: Array[Ingredient] = []
+	for el: Ingredient in self.ingredients:
+		cloned_ingredients.append(el.clone())
+		
 	var new_food := Food.new()
-	new_food.ingredients = self.ingredients.duplicate(true)
+	new_food.ingredients.append_array(cloned_ingredients)
 	return new_food

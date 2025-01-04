@@ -18,6 +18,8 @@ extends Resource
 @export var has_gluten: bool
 
 func to_food_entity() -> Food:
+	var ingredient = Ingredient.new()
+	ingredient.set_ingredient_stats(self)
 	var food = Food.new()
-	food.ingredients.append(Ingredient.new(self))
+	food.ingredients.append(ingredient)
 	return food
