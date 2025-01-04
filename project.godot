@@ -17,7 +17,7 @@ config/icon="res://resources/sprites/icon.svg"
 
 [autoload]
 
-GlobalDragging="*res://components/global_dragging.gd"
+GlobalDragging="*res://autoload/global_dragging.gd"
 
 [input]
 
