@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="IngredientStats" load_steps=3 format=3 uid="uid://dlxsb0rhi2lbx"]
+
+[ext_resource type="Script" path="res://ingredient_stats.gd" id="1_bbg3q"]
+[ext_resource type="Texture2D" uid="uid://b8jnuqrl5a8ej" path="res://godot_bottom.png" id="2_iwhme"]
+
+[resource]
+script = ExtResource("1_bbg3q")
+name = "Frango"
+texture = ExtResource("2_iwhme")
+raw_tasty = 0
+calories = 0
+fat = 0
+carbohydrate = 0
+sugar = 0
+protein = 0
+fibres = 0
+has_lactose = false
+has_gluten = false

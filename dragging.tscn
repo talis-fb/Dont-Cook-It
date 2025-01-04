@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bppbohwhxxnnt"]
+
+[ext_resource type="Script" path="res://dragging.gd" id="1_ac3tb"]
+
+[node name="Dragging" type="Node2D"]
+script = ExtResource("1_ac3tb")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]

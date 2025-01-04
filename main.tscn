@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://bw8nkwe3gtfl2"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_0pq3u"]
+[ext_resource type="PackedScene" uid="uid://br5tdebhjvjti" path="res://creator_ingredient.tscn" id="1_083bv"]
+[ext_resource type="PackedScene" uid="uid://bppbohwhxxnnt" path="res://dragging.tscn" id="3_4vlif"]
+[ext_resource type="PackedScene" uid="uid://duo17cmdjk3if" path="res://Slot.tscn" id="5_eb8wl"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_0pq3u")
+
+[node name="SpawnerFood" parent="." instance=ExtResource("1_083bv")]
+position = Vector2(97, 568)
+
+[node name="Slot3" parent="." instance=ExtResource("5_eb8wl")]
+position = Vector2(986, 174)
+
+[node name="Slot2" parent="." instance=ExtResource("5_eb8wl")]
+position = Vector2(812, 332)
+
+[node name="Slot1" parent="." instance=ExtResource("5_eb8wl")]
+position = Vector2(406, 166)
+
+[node name="Dragging" parent="." instance=ExtResource("3_4vlif")]
