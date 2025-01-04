@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="IngredientStats" load_steps=3 format=3 uid="uid://dlxsb0rhi2lbx"]
 
-[ext_resource type="Script" path="res://resources/ingredient_stats.gd" id="1_4yve6"]
+[ext_resource type="Script" path="res://components/ingredient_stats.gd" id="1_4yve6"]
 [ext_resource type="Texture2D" uid="uid://b1vrlyxtkuqie" path="res://resources/sprites/frango.png" id="2_wr4p1"]
 
 [resource]

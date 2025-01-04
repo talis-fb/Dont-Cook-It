@@ -1,19 +1,17 @@
-[gd_scene load_steps=12 format=3 uid="uid://bw8nkwe3gtfl2"]
+[gd_scene load_steps=11 format=3 uid="uid://bw8nkwe3gtfl2"]
 
-[ext_resource type="Script" path="res://main.gd" id="1_0pq3u"]
-[ext_resource type="PackedScene" uid="uid://br5tdebhjvjti" path="res://scenes/creator_ingredient.tscn" id="1_083bv"]
-[ext_resource type="PackedScene" uid="uid://bppbohwhxxnnt" path="res://scenes/dragging.tscn" id="3_4vlif"]
+[ext_resource type="PackedScene" uid="uid://br5tdebhjvjti" path="res://scenes/Spawner_Food/creator_ingredient.tscn" id="1_083bv"]
+[ext_resource type="PackedScene" uid="uid://bppbohwhxxnnt" path="res://scenes/DraggingCursor/dragging.tscn" id="3_4vlif"]
 [ext_resource type="Resource" uid="uid://dlxsb0rhi2lbx" path="res://resources/ingredient_stats/frango.tres" id="3_aki4l"]
 [ext_resource type="Resource" uid="uid://mumwpjet00f5" path="res://resources/ingredient_stats/batata.tres" id="4_gwnhl"]
-[ext_resource type="PackedScene" uid="uid://duo17cmdjk3if" path="res://scenes/Slot.tscn" id="5_eb8wl"]
+[ext_resource type="PackedScene" uid="uid://duo17cmdjk3if" path="res://scenes/Slot/Slot.tscn" id="5_eb8wl"]
 [ext_resource type="Resource" uid="uid://dk4tlri6e884x" path="res://resources/ingredient_stats/queijo.tres" id="5_tm5jr"]
-[ext_resource type="PackedScene" uid="uid://c5oxu6cckfg6r" path="res://scenes/fogao.tscn" id="7_x77sw"]
-[ext_resource type="PackedScene" uid="uid://dc1jbj3j503no" path="res://scenes/comanda.tscn" id="9_cd6eh"]
-[ext_resource type="Script" path="res://area_comandas.gd" id="9_drntk"]
-[ext_resource type="PackedScene" uid="uid://dmkjrgmyeysjb" path="res://scenes/lixo.tscn" id="11_o148a"]
+[ext_resource type="PackedScene" uid="uid://c5oxu6cckfg6r" path="res://scenes/Fogao/fogao.tscn" id="7_x77sw"]
+[ext_resource type="PackedScene" uid="uid://dc1jbj3j503no" path="res://scenes/Comanda/comanda.tscn" id="9_cd6eh"]
+[ext_resource type="Script" path="res://scenes/Main/area_comandas.gd" id="9_drntk"]
+[ext_resource type="PackedScene" uid="uid://dmkjrgmyeysjb" path="res://scenes/Lixo/lixo.tscn" id="11_o148a"]
 
 [node name="Main" type="Node2D"]
-script = ExtResource("1_0pq3u")
 
 [node name="Area comandas" type="Node2D" parent="."]
 position = Vector2(65, 138)

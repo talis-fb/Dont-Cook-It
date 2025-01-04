@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://wej27gmwpqj3"]
 
-[ext_resource type="Script" path="res://sprite_food.gd" id="1_ufqn5"]
+[ext_resource type="Script" path="res://scenes/SpriteFood/sprite_food.gd" id="1_ufqn5"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_kuf8i"]
 font_size = 20

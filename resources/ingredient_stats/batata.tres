@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="IngredientStats" load_steps=3 format=3 uid="uid://mumwpjet00f5"]
 
-[ext_resource type="Script" path="res://resources/ingredient_stats.gd" id="1_sg7gl"]
+[ext_resource type="Script" path="res://components/ingredient_stats.gd" id="1_sg7gl"]
 [ext_resource type="Texture2D" uid="uid://cs3inhsjjo8fg" path="res://resources/sprites/batata.png" id="2_tkarx"]
 
 [resource]

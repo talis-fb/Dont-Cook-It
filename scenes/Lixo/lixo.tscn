@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://dmkjrgmyeysjb"]
 
-[ext_resource type="Script" path="res://scenes/lixo.gd" id="1_g4216"]
+[ext_resource type="Script" path="res://scenes/Lixo/lixo.gd" id="1_g4216"]
 [ext_resource type="Script" path="res://components/dropable.gd" id="2_ro7h5"]
 [ext_resource type="Script" path="res://components/ShowOnHoverDrop.gd" id="3_8a8ji"]
 

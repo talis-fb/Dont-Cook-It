@@ -1,12 +1,12 @@
 [gd_scene load_steps=9 format=3 uid="uid://c5oxu6cckfg6r"]
 
 [ext_resource type="Texture2D" uid="uid://d37170mtitesn" path="res://resources/sprites/icon.svg" id="1_b1scy"]
-[ext_resource type="Script" path="res://scenes/fogao.gd" id="1_u358w"]
+[ext_resource type="Script" path="res://scenes/Fogao/fogao.gd" id="1_u358w"]
 [ext_resource type="Script" path="res://components/draggable.gd" id="2_h16bj"]
-[ext_resource type="PackedScene" uid="uid://wej27gmwpqj3" path="res://scenes/SpriteFood.tscn" id="3_gv3ho"]
+[ext_resource type="PackedScene" uid="uid://wej27gmwpqj3" path="res://scenes/SpriteFood/SpriteFood.tscn" id="3_gv3ho"]
 [ext_resource type="Script" path="res://components/dropable.gd" id="3_vetcc"]
 [ext_resource type="Script" path="res://components/ShowOnHoverDrop.gd" id="4_qa0av"]
-[ext_resource type="Script" path="res://food.gd" id="6_ywhwy"]
+[ext_resource type="Script" path="res://components/food.gd" id="6_ywhwy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ck5i7"]
 size = Vector2(119, 55)

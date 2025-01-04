@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://br5tdebhjvjti"]
 
 [ext_resource type="Texture2D" uid="uid://d37170mtitesn" path="res://resources/sprites/icon.svg" id="1_71htf"]
-[ext_resource type="Script" path="res://creator_ingredient.gd" id="1_tne31"]
+[ext_resource type="Script" path="res://scenes/Spawner_Food/creator_ingredient.gd" id="1_tne31"]
 [ext_resource type="Script" path="res://components/draggable.gd" id="3_203rj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8psc2"]

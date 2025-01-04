@@ -1,5 +1,0 @@
-[gd_scene format=3 uid="uid://dkqm1yqoij262"]
-
-[node name="DraggingFood" type="Node2D"]
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
