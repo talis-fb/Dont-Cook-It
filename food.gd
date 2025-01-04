@@ -7,7 +7,7 @@ func get_texture() -> Texture2D:
 	if ingredients.size() == 1:
 		return ingredients[0].get_texture()
 	elif ingredients.size() > 1:
-		return load("res://icon.svg")
+		return preload("res://resources/sprites/icon.svg")
 	else:
 		return null
 

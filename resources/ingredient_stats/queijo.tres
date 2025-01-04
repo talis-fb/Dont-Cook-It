@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="IngredientStats" load_steps=3 format=3 uid="uid://dk4tlri6e884x"]
+
+[ext_resource type="Script" path="res://resources/ingredient_stats.gd" id="1_0gyqy"]
+[ext_resource type="Texture2D" uid="uid://bp5ncou4qmih" path="res://resources/sprites/queijo.png" id="2_ofnfs"]
+
+[resource]
+script = ExtResource("1_0gyqy")
+name = "Quejo"
+texture = ExtResource("2_ofnfs")
+raw_tasty = 0
+calories = 0
+fat = 0
+carbohydrate = 0
+sugar = 0
+protein = 0
+fibres = 0
+has_lactose = false
+has_gluten = false

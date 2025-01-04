@@ -1,9 +1,12 @@
 extends Sprite2D
 
+@export var food: Food
+
+func _process(delta: float) -> void:
+	$Label.text = str(food.ingredients.size())
 
 func _on_draggable_start(food: Food) -> void:
-	modulate = Color(0.5, 1, 1, 0.8)
-
+	modulate = Color(1, 1, 1, 0.5)
 
 func _on_draggable_finish(food: Food) -> void:
 	modulate = Color(1, 1, 1)

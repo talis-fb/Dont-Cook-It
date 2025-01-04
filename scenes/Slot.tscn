@@ -1,23 +1,24 @@
 [gd_scene load_steps=8 format=3 uid="uid://duo17cmdjk3if"]
 
-[ext_resource type="Texture2D" uid="uid://d37170mtitesn" path="res://icon.svg" id="1_qtbm1"]
+[ext_resource type="Texture2D" uid="uid://d37170mtitesn" path="res://resources/sprites/icon.svg" id="1_qtbm1"]
 [ext_resource type="Script" path="res://slot.gd" id="1_y5hud"]
-[ext_resource type="Script" path="res://sprite_food.gd" id="3_12hm1"]
-[ext_resource type="PackedScene" uid="uid://0lgraw2k1f3m" path="res://draggable.tscn" id="3_ughgu"]
+[ext_resource type="PackedScene" uid="uid://0lgraw2k1f3m" path="res://scenes/draggable.tscn" id="3_ughgu"]
+[ext_resource type="PackedScene" uid="uid://wej27gmwpqj3" path="res://scenes/SpriteFood.tscn" id="3_vammb"]
 [ext_resource type="Script" path="res://food.gd" id="4_yl643"]
-[ext_resource type="PackedScene" uid="uid://fl3u44bar6vm" path="res://dropable.tscn" id="5_cps38"]
+[ext_resource type="PackedScene" uid="uid://fl3u44bar6vm" path="res://scenes/dropable.tscn" id="5_cps38"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jf6bb"]
-size = Vector2(120, 123)
+size = Vector2(113, 116)
 
 [node name="Slot" type="Area2D"]
 script = ExtResource("1_y5hud")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1, -0.5)
+position = Vector2(-1.5, 0)
 shape = SubResource("RectangleShape2D_jf6bb")
 
 [node name="SpriteSlot" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 1)
 texture = ExtResource("1_qtbm1")
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -29,8 +30,8 @@ offset_bottom = 58.0
 mouse_filter = 2
 color = Color(0.054902, 1, 1, 0.215686)
 
-[node name="SpriteFood" type="Sprite2D" parent="."]
-script = ExtResource("3_12hm1")
+[node name="SpriteFood" parent="." node_paths=PackedStringArray("food") instance=ExtResource("3_vammb")]
+food = NodePath("../Food")
 
 [node name="Draggable" parent="." node_paths=PackedStringArray("food", "area_draggable") instance=ExtResource("3_ughgu")]
 food = NodePath("../Food")

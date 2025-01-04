@@ -1,23 +1,54 @@
-[gd_scene load_steps=5 format=3 uid="uid://bw8nkwe3gtfl2"]
+[gd_scene load_steps=8 format=3 uid="uid://bw8nkwe3gtfl2"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_0pq3u"]
-[ext_resource type="PackedScene" uid="uid://br5tdebhjvjti" path="res://creator_ingredient.tscn" id="1_083bv"]
-[ext_resource type="PackedScene" uid="uid://bppbohwhxxnnt" path="res://dragging.tscn" id="3_4vlif"]
-[ext_resource type="PackedScene" uid="uid://duo17cmdjk3if" path="res://Slot.tscn" id="5_eb8wl"]
+[ext_resource type="PackedScene" uid="uid://br5tdebhjvjti" path="res://scenes/creator_ingredient.tscn" id="1_083bv"]
+[ext_resource type="PackedScene" uid="uid://bppbohwhxxnnt" path="res://scenes/dragging.tscn" id="3_4vlif"]
+[ext_resource type="Resource" uid="uid://dlxsb0rhi2lbx" path="res://resources/ingredient_stats/frango.tres" id="3_aki4l"]
+[ext_resource type="Resource" uid="uid://mumwpjet00f5" path="res://resources/ingredient_stats/batata.tres" id="4_gwnhl"]
+[ext_resource type="PackedScene" uid="uid://duo17cmdjk3if" path="res://scenes/Slot.tscn" id="5_eb8wl"]
+[ext_resource type="Resource" uid="uid://dk4tlri6e884x" path="res://resources/ingredient_stats/queijo.tres" id="5_tm5jr"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_0pq3u")
 
-[node name="SpawnerFood" parent="." instance=ExtResource("1_083bv")]
-position = Vector2(97, 568)
+[node name="Spawners" type="Node2D" parent="."]
 
-[node name="Slot3" parent="." instance=ExtResource("5_eb8wl")]
-position = Vector2(986, 174)
+[node name="SpawnerFrango" parent="Spawners" instance=ExtResource("1_083bv")]
+position = Vector2(410, 546)
+spawn_ingredient = ExtResource("3_aki4l")
 
-[node name="Slot2" parent="." instance=ExtResource("5_eb8wl")]
-position = Vector2(812, 332)
+[node name="SpawnerBatata" parent="Spawners" instance=ExtResource("1_083bv")]
+position = Vector2(738, 529)
+spawn_ingredient = ExtResource("4_gwnhl")
 
-[node name="Slot1" parent="." instance=ExtResource("5_eb8wl")]
-position = Vector2(406, 166)
+[node name="SpawnerQueijo" parent="Spawners" instance=ExtResource("1_083bv")]
+position = Vector2(571, 532)
+spawn_ingredient = ExtResource("5_tm5jr")
+
+[node name="Slots" type="Node2D" parent="."]
+
+[node name="Slot5" parent="Slots" instance=ExtResource("5_eb8wl")]
+position = Vector2(778, 372)
+
+[node name="Slot6" parent="Slots" instance=ExtResource("5_eb8wl")]
+position = Vector2(638, 366)
+
+[node name="Slot7" parent="Slots" instance=ExtResource("5_eb8wl")]
+position = Vector2(488, 364)
+
+[node name="Slot8" parent="Slots" instance=ExtResource("5_eb8wl")]
+position = Vector2(336, 364)
+
+[node name="Slot4" parent="Slots" instance=ExtResource("5_eb8wl")]
+position = Vector2(772, 225)
+
+[node name="Slot3" parent="Slots" instance=ExtResource("5_eb8wl")]
+position = Vector2(632, 219)
+
+[node name="Slot2" parent="Slots" instance=ExtResource("5_eb8wl")]
+position = Vector2(482, 217)
+
+[node name="Slot1" parent="Slots" instance=ExtResource("5_eb8wl")]
+position = Vector2(330, 217)
 
 [node name="Dragging" parent="." instance=ExtResource("3_4vlif")]
