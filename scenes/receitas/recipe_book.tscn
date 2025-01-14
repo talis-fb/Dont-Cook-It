@@ -1,0 +1,217 @@
+[gd_scene load_steps=12 format=3 uid="uid://bl6cijulog57m"]
+
+[ext_resource type="Script" path="res://scenes/receitas/janela_receita.gd" id="1_wklvm"]
+[ext_resource type="Texture2D" uid="uid://b6b8e78d5bwok" path="res://resources/sprites/recipe_book.png" id="2_lw0hx"]
+[ext_resource type="Texture2D" uid="uid://dskmnk7uv6wal" path="res://resources/sprites/X.png" id="3_s7dek"]
+[ext_resource type="Texture2D" uid="uid://byj7jav67lojp" path="res://resources/sprites/+.png" id="4_ffvkl"]
+[ext_resource type="Texture2D" uid="uid://b1vrlyxtkuqie" path="res://resources/sprites/frango.png" id="5_piva3"]
+[ext_resource type="Texture2D" uid="uid://br806q14wm6" path="res://resources/sprites/=.png" id="6_fq4jq"]
+[ext_resource type="Texture2D" uid="uid://bp5ncou4qmih" path="res://resources/sprites/queijo.png" id="7_3jufs"]
+[ext_resource type="Texture2D" uid="uid://qatfahu8p6xj" path="res://resources/sprites/yeallow_ball.png" id="8_862eg"]
+[ext_resource type="Texture2D" uid="uid://cs3inhsjjo8fg" path="res://resources/sprites/batata.png" id="9_8dove"]
+[ext_resource type="Texture2D" uid="uid://dkmqrcgjaubb1" path="res://resources/sprites/red_ball.png" id="10_7vqhc"]
+[ext_resource type="Texture2D" uid="uid://clyvsxelud10m" path="res://resources/sprites/brick.png" id="11_8w3fh"]
+
+[node name="Janela_receita" type="Control"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 326.0
+offset_top = 117.0
+offset_right = 870.0
+offset_bottom = 579.0
+scale = Vector2(0.975347, 1.09502)
+script = ExtResource("1_wklvm")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(269.648, 209.129)
+scale = Vector2(2.65171, 2.42005)
+texture = ExtResource("2_lw0hx")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 490.082
+offset_top = 20.091
+offset_right = 530.082
+offset_bottom = 60.091
+texture_normal = ExtResource("3_s7dek")
+script = ExtResource("1_wklvm")
+
+[node name="+" type="Sprite2D" parent="."]
+position = Vector2(170.196, 97.7151)
+scale = Vector2(0.593207, 0.520755)
+texture = ExtResource("4_ffvkl")
+
+[node name="Frango" type="Sprite2D" parent="."]
+position = Vector2(133.286, 96.8019)
+texture = ExtResource("5_piva3")
+
+[node name="=" type="Sprite2D" parent="."]
+position = Vector2(100.477, 96.8019)
+scale = Vector2(0.569905, 0.728307)
+texture = ExtResource("6_fq4jq")
+
+[node name="Queijo" type="Sprite2D" parent="."]
+position = Vector2(215.308, 98.6283)
+texture = ExtResource("7_3jufs")
+
+[node name="YeallowBall" type="Sprite2D" parent="."]
+position = Vector2(65.6177, 99.5416)
+scale = Vector2(0.756319, 0.728307)
+texture = ExtResource("8_862eg")
+
+[node name="+2" type="Sprite2D" parent="."]
+position = Vector2(170.196, 163.467)
+scale = Vector2(0.593207, 0.520755)
+texture = ExtResource("4_ffvkl")
+
+[node name="Frango2" type="Sprite2D" parent="."]
+position = Vector2(133.286, 162.554)
+texture = ExtResource("5_piva3")
+
+[node name="=2" type="Sprite2D" parent="."]
+position = Vector2(100.477, 162.554)
+scale = Vector2(0.569905, 0.728307)
+texture = ExtResource("6_fq4jq")
+
+[node name="Queijo2" type="Sprite2D" parent="."]
+position = Vector2(213.257, 164.381)
+scale = Vector2(1.84568, 1.79374)
+texture = ExtResource("9_8dove")
+
+[node name="YeallowBall2" type="Sprite2D" parent="."]
+position = Vector2(65.6177, 165.294)
+scale = Vector2(0.756319, 0.728307)
+texture = ExtResource("10_7vqhc")
+
+[node name="+3" type="Sprite2D" parent="."]
+position = Vector2(170.196, 236.525)
+scale = Vector2(0.593207, 0.520755)
+texture = ExtResource("4_ffvkl")
+
+[node name="Frango3" type="Sprite2D" parent="."]
+position = Vector2(133.286, 236.525)
+scale = Vector2(0.852438, 0.728308)
+texture = ExtResource("10_7vqhc")
+
+[node name="=3" type="Sprite2D" parent="."]
+position = Vector2(100.477, 235.612)
+scale = Vector2(0.569905, 0.728307)
+texture = ExtResource("6_fq4jq")
+
+[node name="Queijo3" type="Sprite2D" parent="."]
+position = Vector2(215.308, 237.439)
+texture = ExtResource("7_3jufs")
+
+[node name="YeallowBall3" type="Sprite2D" parent="."]
+position = Vector2(65.6177, 238.352)
+scale = Vector2(0.756319, 0.728307)
+texture = ExtResource("8_862eg")
+
+[node name="+4" type="Sprite2D" parent="."]
+position = Vector2(170.196, 316.889)
+scale = Vector2(0.593207, 0.520755)
+texture = ExtResource("4_ffvkl")
+
+[node name="Frango4" type="Sprite2D" parent="."]
+position = Vector2(133.286, 315.976)
+texture = ExtResource("5_piva3")
+
+[node name="=4" type="Sprite2D" parent="."]
+position = Vector2(100.477, 315.976)
+scale = Vector2(0.569905, 0.728307)
+texture = ExtResource("6_fq4jq")
+
+[node name="Queijo4" type="Sprite2D" parent="."]
+position = Vector2(210.182, 315.976)
+scale = Vector2(0.756319, 0.699767)
+texture = ExtResource("8_862eg")
+
+[node name="YeallowBall4" type="Sprite2D" parent="."]
+position = Vector2(65.6177, 318.716)
+scale = Vector2(0.756319, 0.728307)
+texture = ExtResource("10_7vqhc")
+
+[node name="+5" type="Sprite2D" parent="."]
+position = Vector2(425.49, 163.467)
+scale = Vector2(0.593207, 0.520755)
+texture = ExtResource("4_ffvkl")
+
+[node name="Frango5" type="Sprite2D" parent="."]
+position = Vector2(388.58, 162.554)
+texture = ExtResource("5_piva3")
+
+[node name="=5" type="Sprite2D" parent="."]
+position = Vector2(355.771, 162.554)
+scale = Vector2(0.569905, 0.728307)
+texture = ExtResource("6_fq4jq")
+
+[node name="Queijo5" type="Sprite2D" parent="."]
+position = Vector2(470.602, 164.381)
+texture = ExtResource("5_piva3")
+
+[node name="YeallowBall5" type="Sprite2D" parent="."]
+position = Vector2(320.911, 165.294)
+scale = Vector2(0.756319, 0.728307)
+texture = ExtResource("10_7vqhc")
+
+[node name="+6" type="Sprite2D" parent="."]
+position = Vector2(425.49, 97.7151)
+scale = Vector2(0.593207, 0.520755)
+texture = ExtResource("4_ffvkl")
+
+[node name="Frango6" type="Sprite2D" parent="."]
+position = Vector2(388.58, 96.8019)
+texture = ExtResource("7_3jufs")
+
+[node name="=6" type="Sprite2D" parent="."]
+position = Vector2(355.771, 96.8019)
+scale = Vector2(0.569905, 0.728307)
+texture = ExtResource("6_fq4jq")
+
+[node name="Queijo6" type="Sprite2D" parent="."]
+position = Vector2(470.602, 98.6284)
+texture = ExtResource("7_3jufs")
+
+[node name="YeallowBall6" type="Sprite2D" parent="."]
+position = Vector2(320.911, 99.5415)
+scale = Vector2(0.756319, 0.728307)
+texture = ExtResource("8_862eg")
+
+[node name="+7" type="Sprite2D" parent="."]
+position = Vector2(412.161, 235.612)
+scale = Vector2(0.366508, 0.405663)
+texture = ExtResource("4_ffvkl")
+
+[node name="Frango7" type="Sprite2D" parent="."]
+position = Vector2(387.092, 236.395)
+scale = Vector2(1.46752, 1.69594)
+texture = ExtResource("9_8dove")
+
+[node name="=7" type="Sprite2D" parent="."]
+position = Vector2(355.771, 235.612)
+scale = Vector2(0.569905, 0.728307)
+texture = ExtResource("6_fq4jq")
+
+[node name="Queijo7" type="Sprite2D" parent="."]
+position = Vector2(438.1, 235.939)
+scale = Vector2(1.49955, 1.77204)
+texture = ExtResource("9_8dove")
+
+[node name="YeallowBall7" type="Sprite2D" parent="."]
+position = Vector2(320.911, 238.352)
+scale = Vector2(0.756319, 0.728307)
+texture = ExtResource("11_8w3fh")
+
+[node name="+8" type="Sprite2D" parent="."]
+position = Vector2(464.45, 235.612)
+scale = Vector2(0.436415, 0.384908)
+texture = ExtResource("4_ffvkl")
+
+[node name="Queijo8" type="Sprite2D" parent="."]
+position = Vector2(491.107, 235.612)
+scale = Vector2(1.49955, 1.77204)
+texture = ExtResource("9_8dove")
+
+[connection signal="pressed" from="TextureButton" to="." method="fechar_janela"]

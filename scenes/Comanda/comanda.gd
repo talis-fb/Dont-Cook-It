@@ -1,3 +1,4 @@
+#comanda
 extends Node2D
 
 @export var _requested_food: Food

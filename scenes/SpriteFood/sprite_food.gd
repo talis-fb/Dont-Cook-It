@@ -1,3 +1,4 @@
+#sprite_food
 extends Sprite2D
 
 @export var food: Food

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bw8nkwe3gtfl2"]
+[gd_scene load_steps=14 format=3 uid="uid://bw8nkwe3gtfl2"]
 
 [ext_resource type="PackedScene" uid="uid://br5tdebhjvjti" path="res://scenes/Spawner_Food/creator_ingredient.tscn" id="1_083bv"]
 [ext_resource type="PackedScene" uid="uid://bppbohwhxxnnt" path="res://scenes/DraggingCursor/dragging.tscn" id="3_4vlif"]
@@ -9,7 +9,10 @@
 [ext_resource type="PackedScene" uid="uid://c5oxu6cckfg6r" path="res://scenes/Fogao/fogao.tscn" id="7_x77sw"]
 [ext_resource type="PackedScene" uid="uid://dc1jbj3j503no" path="res://scenes/Comanda/comanda.tscn" id="9_cd6eh"]
 [ext_resource type="Script" path="res://scenes/Main/area_comandas.gd" id="9_drntk"]
+[ext_resource type="Texture2D" uid="uid://cxrha18m3f3d1" path="res://resources/sprites/cook_book.png" id="11_l378c"]
 [ext_resource type="PackedScene" uid="uid://dmkjrgmyeysjb" path="res://scenes/Lixo/lixo.tscn" id="11_o148a"]
+[ext_resource type="Script" path="res://scenes/receitas/cookbookbutton.gd" id="12_x7av4"]
+[ext_resource type="PackedScene" uid="uid://bl6cijulog57m" path="res://scenes/receitas/recipe_book.tscn" id="13_hj352"]
 
 [node name="Main" type="Node2D"]
 
@@ -60,6 +63,7 @@ position = Vector2(632, 219)
 
 [node name="Slot2" parent="Slots" instance=ExtResource("5_eb8wl")]
 position = Vector2(482, 217)
+scale = Vector2(0.974868, 1.05134)
 
 [node name="Slot1" parent="Slots" instance=ExtResource("5_eb8wl")]
 position = Vector2(330, 217)
@@ -80,4 +84,16 @@ position = Vector2(1067, 564)
 
 [node name="Dragging" parent="." instance=ExtResource("3_4vlif")]
 
+[node name="cookbookbutton" type="TextureButton" parent="."]
+offset_left = 1001.0
+offset_top = 354.0
+offset_right = 1161.0
+offset_bottom = 527.0
+action_mode = 0
+texture_normal = ExtResource("11_l378c")
+script = ExtResource("12_x7av4")
+
+[node name="Janela_receita" parent="." instance=ExtResource("13_hj352")]
+
 [connection signal="timeout" from="Area comandas/Timer" to="Area comandas" method="_on_timer_timeout"]
+[connection signal="pressed" from="cookbookbutton" to="cookbookbutton" method="_on_pressed"]
