@@ -1,3 +1,4 @@
+#creator_ingredient
 extends Area2D
 
 signal new_food(new_food: Food)

@@ -1,3 +1,4 @@
+#global_draggin
 extends Node
 
 signal start_dragging(food: Food)
