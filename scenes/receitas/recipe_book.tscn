@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bl6cijulog57m"]
+[gd_scene load_steps=13 format=3 uid="uid://bl6cijulog57m"]
 
 [ext_resource type="Script" path="res://scenes/receitas/janela_receita.gd" id="1_wklvm"]
 [ext_resource type="Texture2D" uid="uid://b6b8e78d5bwok" path="res://resources/sprites/recipe_book.png" id="2_lw0hx"]
@@ -11,207 +11,345 @@
 [ext_resource type="Texture2D" uid="uid://cs3inhsjjo8fg" path="res://resources/sprites/batata.png" id="9_8dove"]
 [ext_resource type="Texture2D" uid="uid://dkmqrcgjaubb1" path="res://resources/sprites/red_ball.png" id="10_7vqhc"]
 [ext_resource type="Texture2D" uid="uid://clyvsxelud10m" path="res://resources/sprites/brick.png" id="11_8w3fh"]
+[ext_resource type="Texture2D" uid="uid://dcyj4fvq1as0m" path="res://resources/sprites/next.png" id="12_11c4c"]
 
 [node name="Janela_receita" type="Control"]
-visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_left = 326.0
-offset_top = 117.0
+offset_top = 121.0
 offset_right = 870.0
-offset_bottom = 579.0
+offset_bottom = 583.0
 scale = Vector2(0.975347, 1.09502)
 script = ExtResource("1_wklvm")
-metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="recipes" type="Sprite2D" parent="."]
 position = Vector2(269.648, 209.129)
 scale = Vector2(2.65171, 2.42005)
 texture = ExtResource("2_lw0hx")
 
-[node name="TextureButton" type="TextureButton" parent="."]
-layout_mode = 0
-offset_left = 490.082
-offset_top = 20.091
-offset_right = 530.082
-offset_bottom = 60.091
+[node name="TextureButton" type="TextureButton" parent="recipes"]
+offset_left = 83.0
+offset_top = -78.0
+offset_right = 99.0
+offset_bottom = -62.0
 texture_normal = ExtResource("3_s7dek")
 script = ExtResource("1_wklvm")
 
-[node name="+" type="Sprite2D" parent="."]
-position = Vector2(170.196, 97.7151)
-scale = Vector2(0.593207, 0.520755)
+[node name="+" type="Sprite2D" parent="recipes"]
+position = Vector2(-37.5049, -46.0378)
+scale = Vector2(0.223707, 0.215184)
 texture = ExtResource("4_ffvkl")
 
-[node name="Frango" type="Sprite2D" parent="."]
-position = Vector2(133.286, 96.8019)
+[node name="Frango" type="Sprite2D" parent="recipes"]
+position = Vector2(-51.4242, -46.4152)
+scale = Vector2(0.377115, 0.413215)
 texture = ExtResource("5_piva3")
 
-[node name="=" type="Sprite2D" parent="."]
-position = Vector2(100.477, 96.8019)
-scale = Vector2(0.569905, 0.728307)
+[node name="=" type="Sprite2D" parent="recipes"]
+position = Vector2(-63.797, -46.4152)
+scale = Vector2(0.21492, 0.300947)
 texture = ExtResource("6_fq4jq")
 
-[node name="Queijo" type="Sprite2D" parent="."]
-position = Vector2(215.308, 98.6283)
+[node name="Queijo" type="Sprite2D" parent="recipes"]
+position = Vector2(-20.4924, -45.6605)
+scale = Vector2(0.377115, 0.413215)
 texture = ExtResource("7_3jufs")
 
-[node name="YeallowBall" type="Sprite2D" parent="."]
-position = Vector2(65.6177, 99.5416)
-scale = Vector2(0.756319, 0.728307)
+[node name="YeallowBall" type="Sprite2D" parent="recipes"]
+position = Vector2(-76.9429, -45.2831)
+scale = Vector2(0.285219, 0.300947)
 texture = ExtResource("8_862eg")
 
-[node name="+2" type="Sprite2D" parent="."]
-position = Vector2(170.196, 163.467)
-scale = Vector2(0.593207, 0.520755)
+[node name="+2" type="Sprite2D" parent="recipes"]
+position = Vector2(-37.5049, -18.8682)
+scale = Vector2(0.223707, 0.215184)
 texture = ExtResource("4_ffvkl")
 
-[node name="Frango2" type="Sprite2D" parent="."]
-position = Vector2(133.286, 162.554)
+[node name="Frango2" type="Sprite2D" parent="recipes"]
+position = Vector2(-51.4242, -19.2455)
+scale = Vector2(0.377115, 0.413215)
 texture = ExtResource("5_piva3")
 
-[node name="=2" type="Sprite2D" parent="."]
-position = Vector2(100.477, 162.554)
-scale = Vector2(0.569905, 0.728307)
+[node name="=2" type="Sprite2D" parent="recipes"]
+position = Vector2(-63.797, -19.2455)
+scale = Vector2(0.21492, 0.300947)
 texture = ExtResource("6_fq4jq")
 
-[node name="Queijo2" type="Sprite2D" parent="."]
-position = Vector2(213.257, 164.381)
-scale = Vector2(1.84568, 1.79374)
+[node name="Queijo2" type="Sprite2D" parent="recipes"]
+position = Vector2(-21.2659, -18.4905)
+scale = Vector2(0.696034, 0.7412)
 texture = ExtResource("9_8dove")
 
-[node name="YeallowBall2" type="Sprite2D" parent="."]
-position = Vector2(65.6177, 165.294)
-scale = Vector2(0.756319, 0.728307)
+[node name="YeallowBall2" type="Sprite2D" parent="recipes"]
+position = Vector2(-76.9429, -18.1133)
+scale = Vector2(0.285219, 0.300947)
 texture = ExtResource("10_7vqhc")
 
-[node name="+3" type="Sprite2D" parent="."]
-position = Vector2(170.196, 236.525)
-scale = Vector2(0.593207, 0.520755)
+[node name="+3" type="Sprite2D" parent="recipes"]
+position = Vector2(-37.5049, 11.3204)
+scale = Vector2(0.223707, 0.215184)
 texture = ExtResource("4_ffvkl")
 
-[node name="Frango3" type="Sprite2D" parent="."]
-position = Vector2(133.286, 236.525)
-scale = Vector2(0.852438, 0.728308)
+[node name="Frango3" type="Sprite2D" parent="recipes"]
+position = Vector2(-51.4242, 11.3204)
+scale = Vector2(0.321467, 0.300948)
 texture = ExtResource("10_7vqhc")
 
-[node name="=3" type="Sprite2D" parent="."]
-position = Vector2(100.477, 235.612)
-scale = Vector2(0.569905, 0.728307)
+[node name="=3" type="Sprite2D" parent="recipes"]
+position = Vector2(-63.797, 10.9432)
+scale = Vector2(0.21492, 0.300947)
 texture = ExtResource("6_fq4jq")
 
-[node name="Queijo3" type="Sprite2D" parent="."]
-position = Vector2(215.308, 237.439)
+[node name="Queijo3" type="Sprite2D" parent="recipes"]
+position = Vector2(-20.4924, 11.6981)
+scale = Vector2(0.377115, 0.413215)
 texture = ExtResource("7_3jufs")
 
-[node name="YeallowBall3" type="Sprite2D" parent="."]
-position = Vector2(65.6177, 238.352)
-scale = Vector2(0.756319, 0.728307)
+[node name="YeallowBall3" type="Sprite2D" parent="recipes"]
+position = Vector2(-76.9429, 12.0754)
+scale = Vector2(0.285219, 0.300947)
 texture = ExtResource("8_862eg")
 
-[node name="+4" type="Sprite2D" parent="."]
-position = Vector2(170.196, 316.889)
-scale = Vector2(0.593207, 0.520755)
+[node name="+4" type="Sprite2D" parent="recipes"]
+position = Vector2(-37.5049, 44.528)
+scale = Vector2(0.223707, 0.215184)
 texture = ExtResource("4_ffvkl")
 
-[node name="Frango4" type="Sprite2D" parent="."]
-position = Vector2(133.286, 315.976)
+[node name="Frango4" type="Sprite2D" parent="recipes"]
+position = Vector2(-51.4242, 44.1508)
+scale = Vector2(0.377115, 0.413215)
 texture = ExtResource("5_piva3")
 
-[node name="=4" type="Sprite2D" parent="."]
-position = Vector2(100.477, 315.976)
-scale = Vector2(0.569905, 0.728307)
+[node name="=4" type="Sprite2D" parent="recipes"]
+position = Vector2(-63.797, 44.1508)
+scale = Vector2(0.21492, 0.300947)
 texture = ExtResource("6_fq4jq")
 
-[node name="Queijo4" type="Sprite2D" parent="."]
-position = Vector2(210.182, 315.976)
-scale = Vector2(0.756319, 0.699767)
+[node name="Queijo4" type="Sprite2D" parent="recipes"]
+position = Vector2(-22.4255, 44.1508)
+scale = Vector2(0.285219, 0.289154)
 texture = ExtResource("8_862eg")
 
-[node name="YeallowBall4" type="Sprite2D" parent="."]
-position = Vector2(65.6177, 318.716)
-scale = Vector2(0.756319, 0.728307)
+[node name="YeallowBall4" type="Sprite2D" parent="recipes"]
+position = Vector2(-76.9429, 45.283)
+scale = Vector2(0.285219, 0.300947)
 texture = ExtResource("10_7vqhc")
 
-[node name="+5" type="Sprite2D" parent="."]
-position = Vector2(425.49, 163.467)
-scale = Vector2(0.593207, 0.520755)
+[node name="+5" type="Sprite2D" parent="recipes"]
+position = Vector2(58.7704, -18.8682)
+scale = Vector2(0.223707, 0.215184)
 texture = ExtResource("4_ffvkl")
 
-[node name="Frango5" type="Sprite2D" parent="."]
-position = Vector2(388.58, 162.554)
+[node name="Frango5" type="Sprite2D" parent="recipes"]
+position = Vector2(44.8511, -19.2455)
+scale = Vector2(0.377115, 0.413215)
 texture = ExtResource("5_piva3")
 
-[node name="=5" type="Sprite2D" parent="."]
-position = Vector2(355.771, 162.554)
-scale = Vector2(0.569905, 0.728307)
+[node name="=5" type="Sprite2D" parent="recipes"]
+position = Vector2(32.4783, -19.2455)
+scale = Vector2(0.21492, 0.300947)
 texture = ExtResource("6_fq4jq")
 
-[node name="Queijo5" type="Sprite2D" parent="."]
-position = Vector2(470.602, 164.381)
+[node name="Queijo5" type="Sprite2D" parent="recipes"]
+position = Vector2(75.7828, -18.4905)
+scale = Vector2(0.377115, 0.413215)
 texture = ExtResource("5_piva3")
 
-[node name="YeallowBall5" type="Sprite2D" parent="."]
-position = Vector2(320.911, 165.294)
-scale = Vector2(0.756319, 0.728307)
+[node name="YeallowBall5" type="Sprite2D" parent="recipes"]
+position = Vector2(19.3321, -18.1133)
+scale = Vector2(0.285219, 0.300947)
 texture = ExtResource("10_7vqhc")
 
-[node name="+6" type="Sprite2D" parent="."]
-position = Vector2(425.49, 97.7151)
-scale = Vector2(0.593207, 0.520755)
+[node name="+6" type="Sprite2D" parent="recipes"]
+position = Vector2(58.7704, -46.0378)
+scale = Vector2(0.223707, 0.215184)
 texture = ExtResource("4_ffvkl")
 
-[node name="Frango6" type="Sprite2D" parent="."]
-position = Vector2(388.58, 96.8019)
+[node name="Frango6" type="Sprite2D" parent="recipes"]
+position = Vector2(44.8511, -46.4152)
+scale = Vector2(0.377115, 0.413215)
 texture = ExtResource("7_3jufs")
 
-[node name="=6" type="Sprite2D" parent="."]
-position = Vector2(355.771, 96.8019)
-scale = Vector2(0.569905, 0.728307)
+[node name="=6" type="Sprite2D" parent="recipes"]
+position = Vector2(32.4783, -46.4152)
+scale = Vector2(0.21492, 0.300947)
 texture = ExtResource("6_fq4jq")
 
-[node name="Queijo6" type="Sprite2D" parent="."]
-position = Vector2(470.602, 98.6284)
+[node name="Queijo6" type="Sprite2D" parent="recipes"]
+position = Vector2(75.7828, -45.6605)
+scale = Vector2(0.377115, 0.413215)
 texture = ExtResource("7_3jufs")
 
-[node name="YeallowBall6" type="Sprite2D" parent="."]
-position = Vector2(320.911, 99.5415)
-scale = Vector2(0.756319, 0.728307)
+[node name="YeallowBall6" type="Sprite2D" parent="recipes"]
+position = Vector2(19.3321, -45.2831)
+scale = Vector2(0.285219, 0.300947)
 texture = ExtResource("8_862eg")
 
-[node name="+7" type="Sprite2D" parent="."]
-position = Vector2(412.161, 235.612)
-scale = Vector2(0.366508, 0.405663)
+[node name="+7" type="Sprite2D" parent="recipes"]
+position = Vector2(53.7438, 10.9432)
+scale = Vector2(0.138216, 0.167626)
 texture = ExtResource("4_ffvkl")
 
-[node name="Frango7" type="Sprite2D" parent="."]
-position = Vector2(387.092, 236.395)
-scale = Vector2(1.46752, 1.69594)
+[node name="Frango7" type="Sprite2D" parent="recipes"]
+position = Vector2(44.2899, 11.2667)
+scale = Vector2(0.553424, 0.700787)
 texture = ExtResource("9_8dove")
 
-[node name="=7" type="Sprite2D" parent="."]
-position = Vector2(355.771, 235.612)
-scale = Vector2(0.569905, 0.728307)
+[node name="=7" type="Sprite2D" parent="recipes"]
+position = Vector2(32.4783, 10.9432)
+scale = Vector2(0.21492, 0.300947)
 texture = ExtResource("6_fq4jq")
 
-[node name="Queijo7" type="Sprite2D" parent="."]
-position = Vector2(438.1, 235.939)
-scale = Vector2(1.49955, 1.77204)
+[node name="Queijo7" type="Sprite2D" parent="recipes"]
+position = Vector2(63.5258, 11.0783)
+scale = Vector2(0.565503, 0.732233)
 texture = ExtResource("9_8dove")
 
-[node name="YeallowBall7" type="Sprite2D" parent="."]
-position = Vector2(320.911, 238.352)
-scale = Vector2(0.756319, 0.728307)
+[node name="YeallowBall7" type="Sprite2D" parent="recipes"]
+position = Vector2(19.3321, 12.0754)
+scale = Vector2(0.285219, 0.300947)
 texture = ExtResource("11_8w3fh")
 
-[node name="+8" type="Sprite2D" parent="."]
-position = Vector2(464.45, 235.612)
-scale = Vector2(0.436415, 0.384908)
+[node name="+8" type="Sprite2D" parent="recipes"]
+position = Vector2(73.4628, 10.9432)
+scale = Vector2(0.164579, 0.15905)
 texture = ExtResource("4_ffvkl")
 
-[node name="Queijo8" type="Sprite2D" parent="."]
-position = Vector2(491.107, 235.612)
-scale = Vector2(1.49955, 1.77204)
+[node name="Queijo8" type="Sprite2D" parent="recipes"]
+position = Vector2(83.5155, 10.9432)
+scale = Vector2(0.565503, 0.732233)
 texture = ExtResource("9_8dove")
 
-[connection signal="pressed" from="TextureButton" to="." method="fechar_janela"]
+[node name="goToIngredients" type="TextureButton" parent="recipes"]
+offset_left = -95.1154
+offset_top = -80.7548
+offset_right = -79.1154
+offset_bottom = -63.7548
+texture_normal = ExtResource("12_11c4c")
+script = ExtResource("1_wklvm")
+
+[node name="Nutrition" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(270.335, 209.471)
+scale = Vector2(2.63833, 2.45087)
+texture = ExtResource("2_lw0hx")
+
+[node name="TextureButton" type="TextureButton" parent="Nutrition"]
+offset_left = 83.0
+offset_top = -80.0
+offset_right = 99.0
+offset_bottom = -63.0
+texture_normal = ExtResource("3_s7dek")
+script = ExtResource("1_wklvm")
+
+[node name="YeallowBall" type="Sprite2D" parent="Nutrition"]
+position = Vector2(17.1548, -47.0806)
+scale = Vector2(0.285219, 0.300947)
+texture = ExtResource("8_862eg")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Nutrition/YeallowBall"]
+offset_left = 29.0
+offset_top = -47.0
+offset_right = 160.0
+offset_bottom = 24.0
+theme_override_colors/default_color = Color(1, 0.231373, 0.0196078, 1)
+theme_override_font_sizes/normal_font_size = 16
+text = "Proteina (7)
+gordura (7)
+carboidrato (14)"
+
+[node name="Queijo" type="Sprite2D" parent="Nutrition"]
+position = Vector2(-79.6495, -22.2643)
+scale = Vector2(0.377115, 0.413215)
+texture = ExtResource("7_3jufs")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Nutrition/Queijo"]
+offset_left = 17.6119
+offset_top = -26.8624
+offset_right = 148.612
+offset_bottom = 27.1376
+theme_override_colors/default_color = Color(1, 0.231373, 0.0196078, 1)
+theme_override_font_sizes/normal_font_size = 13
+text = "caloria (8)
+gordura (6)
+proteina (1)"
+
+[node name="potato" type="Sprite2D" parent="Nutrition"]
+position = Vector2(-78.992, 11.8628)
+scale = Vector2(0.394413, 0.486805)
+texture = ExtResource("9_8dove")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Nutrition/potato"]
+offset_left = 15.1725
+offset_top = -31.984
+offset_right = 155.173
+offset_bottom = 17.016
+theme_override_colors/default_color = Color(1, 0.231373, 0.0196078, 1)
+theme_override_font_sizes/normal_font_size = 11
+text = "Proteina (1)
+carboidrato (3)
+fibras (4)"
+
+[node name="Frango" type="Sprite2D" parent="Nutrition"]
+position = Vector2(-78.1029, -49.0567)
+scale = Vector2(0.377115, 0.413215)
+texture = ExtResource("5_piva3")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Nutrition/Frango"]
+offset_left = 16.0
+offset_top = -33.0
+offset_right = 147.0
+offset_bottom = 21.0
+theme_override_colors/default_color = Color(1, 0.231373, 0.0196078, 1)
+theme_override_font_sizes/normal_font_size = 13
+text = "Proteina (10)
+gordura (3)
+fibras (7)"
+
+[node name="redBall" type="Sprite2D" parent="Nutrition"]
+position = Vector2(15.16, -19.6478)
+scale = Vector2(0.285219, 0.300947)
+texture = ExtResource("10_7vqhc")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Nutrition/redBall"]
+offset_left = 29.0
+offset_top = -37.0
+offset_right = 160.0
+offset_bottom = 37.0
+theme_override_colors/default_color = Color(1, 0.231373, 0.0196078, 1)
+theme_override_font_sizes/normal_font_size = 16
+text = "Proteina (17)
+gordura (5)
+fibras (11)"
+
+[node name="brick" type="Sprite2D" parent="Nutrition"]
+position = Vector2(-76.9973, 40.7785)
+scale = Vector2(0.285219, 0.300947)
+texture = ExtResource("11_8w3fh")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Nutrition/brick"]
+offset_left = 22.3799
+offset_top = -36.9547
+offset_right = 187.38
+offset_bottom = 32.0453
+theme_override_colors/default_color = Color(1, 0.231373, 0.0196078, 1)
+theme_override_font_sizes/normal_font_size = 15
+text = "Proteina (0)
+gordura (0)
+fibras (0)"
+
+[node name="goToRecipes" type="TextureButton" parent="Nutrition"]
+offset_left = -81.3857
+offset_top = -64.5042
+offset_right = -65.3857
+offset_bottom = -47.5042
+rotation = -3.17301
+texture_normal = ExtResource("12_11c4c")
+script = ExtResource("1_wklvm")
+
+[connection signal="pressed" from="recipes/TextureButton" to="." method="fechar_janela"]
+[connection signal="pressed" from="recipes/goToIngredients" to="." method="trocar_pagina"]
+[connection signal="pressed" from="Nutrition/TextureButton" to="." method="fechar_janela"]
+[connection signal="pressed" from="Nutrition/goToRecipes" to="." method="trocar_pagina"]

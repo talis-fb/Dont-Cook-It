@@ -94,6 +94,7 @@ texture_normal = ExtResource("11_l378c")
 script = ExtResource("12_x7av4")
 
 [node name="Janela_receita" parent="." instance=ExtResource("13_hj352")]
+visible = false
 
 [connection signal="timeout" from="Area comandas/Timer" to="Area comandas" method="_on_timer_timeout"]
 [connection signal="pressed" from="cookbookbutton" to="cookbookbutton" method="_on_pressed"]
