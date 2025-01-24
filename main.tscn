@@ -1,6 +1,7 @@
-[gd_scene load_steps=14 format=3 uid="uid://bw8nkwe3gtfl2"]
+[gd_scene load_steps=16 format=3 uid="uid://bw8nkwe3gtfl2"]
 
 [ext_resource type="PackedScene" uid="uid://br5tdebhjvjti" path="res://scenes/Spawner_Food/creator_ingredient.tscn" id="1_083bv"]
+[ext_resource type="Script" path="res://scenes/Main/points.gd" id="1_qiwkr"]
 [ext_resource type="PackedScene" uid="uid://bppbohwhxxnnt" path="res://scenes/DraggingCursor/dragging.tscn" id="3_4vlif"]
 [ext_resource type="Resource" uid="uid://dlxsb0rhi2lbx" path="res://resources/ingredient_stats/frango.tres" id="3_aki4l"]
 [ext_resource type="Resource" uid="uid://mumwpjet00f5" path="res://resources/ingredient_stats/batata.tres" id="4_gwnhl"]
@@ -14,14 +15,32 @@
 [ext_resource type="Script" path="res://scenes/receitas/cookbookbutton.gd" id="12_x7av4"]
 [ext_resource type="PackedScene" uid="uid://bl6cijulog57m" path="res://scenes/receitas/recipe_book.tscn" id="13_hj352"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_wflv1"]
+font_size = 28
+font_color = Color(0.054902, 1, 0.803922, 1)
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
+
 [node name="Main" type="Node2D"]
 
+[node name="Points2" type="Node2D" parent="."]
+position = Vector2(1085, 13)
+script = ExtResource("1_qiwkr")
+
+[node name="Label" type="Label" parent="Points2"]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "0"
+label_settings = SubResource("LabelSettings_wflv1")
+metadata/_edit_use_anchors_ = true
+
 [node name="Area comandas" type="Node2D" parent="."]
-position = Vector2(65, 138)
+position = Vector2(13, 13)
 script = ExtResource("9_drntk")
 
 [node name="Comanda" parent="Area comandas" instance=ExtResource("9_cd6eh")]
-position = Vector2(-26.24, -89)
+visible = false
+position = Vector2(43, 33)
 
 [node name="Timer" type="Timer" parent="Area comandas"]
 wait_time = 15.0
@@ -95,5 +114,8 @@ script = ExtResource("12_x7av4")
 
 [node name="Janela_receita" parent="." instance=ExtResource("13_hj352")]
 
+[node name="Points" type="Node2D" parent="."]
+
+[connection signal="food_delivered" from="Area comandas" to="Points2" method="_on_area_comandas_food_delivered"]
 [connection signal="timeout" from="Area comandas/Timer" to="Area comandas" method="_on_timer_timeout"]
 [connection signal="pressed" from="cookbookbutton" to="cookbookbutton" method="_on_pressed"]

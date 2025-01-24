@@ -7,7 +7,7 @@ func get_texture() -> Texture2D:
 	if ingredients.size() == 1:
 		return ingredients[0].get_texture()
 	elif ingredients.size() > 1:
-		return preload("res://resources/sprites/icon.svg")
+		return preload("res://resources/sprites/red_ball.png")
 	else:
 		return null
 
@@ -16,6 +16,9 @@ func get_tasty() -> int:
 	for el in ingredients:
 		sum += el.get_tasty()
 	return sum
+
+func can_combine(new_food: Food) -> bool:
+	return 5 >= (new_food.ingredients.size() + self.ingredients.size())
 
 func combine(new_food: Food):
 	self.ingredients.append_array(new_food.ingredients)
