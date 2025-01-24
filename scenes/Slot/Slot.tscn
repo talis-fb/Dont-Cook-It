@@ -1,11 +1,13 @@
-[gd_scene load_steps=9 format=3 uid="uid://duo17cmdjk3if"]
+[gd_scene load_steps=11 format=3 uid="uid://duo17cmdjk3if"]
 
 [ext_resource type="Texture2D" uid="uid://d37170mtitesn" path="res://resources/sprites/icon.svg" id="1_qtbm1"]
 [ext_resource type="Script" path="res://scenes/Slot/slot.gd" id="1_y5hud"]
 [ext_resource type="Script" path="res://components/ShowOnHoverDrop.gd" id="3_roa28"]
 [ext_resource type="PackedScene" uid="uid://wej27gmwpqj3" path="res://scenes/SpriteFood/SpriteFood.tscn" id="3_vammb"]
+[ext_resource type="Script" path="res://components/ShowOnDropAllowed.gd" id="4_qwgsj"]
 [ext_resource type="Script" path="res://components/food.gd" id="4_yl643"]
 [ext_resource type="Script" path="res://components/dropable.gd" id="5_5ef6n"]
+[ext_resource type="Script" path="res://components/ShowOnDropDisallowed.gd" id="5_6p67p"]
 [ext_resource type="Script" path="res://components/draggable.gd" id="6_ijsx2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jf6bb"]
@@ -27,13 +29,29 @@ visible = false
 script = ExtResource("3_roa28")
 dropable = NodePath("../Dropable")
 
-[node name="ColorRect" type="ColorRect" parent="ShowOnHoverDrop"]
+[node name="ShowOnDropAllowed" type="Node2D" parent="ShowOnHoverDrop" node_paths=PackedStringArray("dropable")]
+script = ExtResource("4_qwgsj")
+dropable = NodePath("../../Dropable")
+
+[node name="ColorRect" type="ColorRect" parent="ShowOnHoverDrop/ShowOnDropAllowed"]
 offset_left = -57.0
 offset_top = -60.0
 offset_right = 58.0
 offset_bottom = 58.0
 mouse_filter = 2
 color = Color(0.054902, 1, 1, 0.215686)
+
+[node name="ShowOnDropDisallowed" type="Node2D" parent="ShowOnHoverDrop" node_paths=PackedStringArray("dropable")]
+script = ExtResource("5_6p67p")
+dropable = NodePath("../../Dropable")
+
+[node name="ColorRect" type="ColorRect" parent="ShowOnHoverDrop/ShowOnDropDisallowed"]
+offset_left = -57.0
+offset_top = -59.0
+offset_right = 58.0
+offset_bottom = 59.0
+mouse_filter = 2
+color = Color(1, 0, 0, 0.215686)
 
 [node name="SpriteFood" parent="." node_paths=PackedStringArray("food") instance=ExtResource("3_vammb")]
 food = NodePath("../Food")
@@ -52,14 +70,14 @@ food = NodePath("../Food")
 area_draggable = NodePath("..")
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]
-[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered2"]
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered2"]
 [connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
 [connection signal="drag_item_entered" from="Dropable" to="." method="_on_dropable_drag_item_entered"]
 [connection signal="drag_item_exited" from="Dropable" to="." method="_on_dropable_drag_item_exited"]
 [connection signal="dropped" from="Dropable" to="." method="_on_dropable_dropped"]
-[connection signal="cancel" from="Draggable" to="SpriteFood" method="_on_draggable_end"]
 [connection signal="cancel" from="Draggable" to="SpriteFood" method="_on_draggable_cancel"]
+[connection signal="cancel" from="Draggable" to="SpriteFood" method="_on_draggable_end"]
 [connection signal="finish" from="Draggable" to="." method="_on_draggable_finish"]
 [connection signal="finish" from="Draggable" to="SpriteFood" method="_on_draggable_end"]
 [connection signal="start" from="Draggable" to="SpriteFood" method="_on_draggable_start"]

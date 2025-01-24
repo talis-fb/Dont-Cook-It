@@ -5,7 +5,11 @@ extends Sprite2D
 
 func _process(delta: float) -> void:
 	self.texture = food.get_texture()
+	
 	$Label.text = str(food.ingredients.size())
+	if food.ingredients.size() > 0:
+		$Label.text += " / 5"
+		
 	$Tasty.text = str(food.get_tasty())
 	
 	var cooking_values: Array[int] = []
