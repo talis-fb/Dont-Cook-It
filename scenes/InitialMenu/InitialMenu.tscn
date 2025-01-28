@@ -1,22 +1,31 @@
-[gd_scene load_steps=2 format=3 uid="uid://becvuqnuirdp7"]
+[gd_scene load_steps=4 format=3 uid="uid://becvuqnuirdp7"]
 
 [ext_resource type="Script" path="res://scenes/InitialMenu/initial_menu.gd" id="1_8gxdt"]
+[ext_resource type="Texture2D" uid="uid://boohk3cyd235f" path="res://resources/sprites/ingredientes/kitchen.png" id="2_6klb5"]
+[ext_resource type="Theme" uid="uid://bfd1artkovmwm" path="res://resources/default_buttom.tres" id="3_7wier"]
 
 [node name="InitialMenu" type="Node2D"]
 script = ExtResource("1_8gxdt")
 
+[node name="scenario" type="Sprite2D" parent="."]
+modulate = Color(0.270222, 0.270222, 0.270222, 1)
+position = Vector2(630, 310)
+texture = ExtResource("2_6klb5")
+
 [node name="PlayButton" type="Button" parent="."]
-offset_left = 574.0
-offset_top = 246.0
-offset_right = 615.0
-offset_bottom = 277.0
+offset_left = 558.0
+offset_top = 248.0
+offset_right = 645.0
+offset_bottom = 313.0
+theme = ExtResource("3_7wier")
 text = "Play"
 
 [node name="QuitButton" type="Button" parent="."]
-offset_left = 577.0
-offset_top = 348.0
-offset_right = 619.0
-offset_bottom = 379.0
+offset_left = 559.0
+offset_top = 340.0
+offset_right = 646.0
+offset_bottom = 405.0
+theme = ExtResource("3_7wier")
 text = "Quit"
 
 [node name="Label" type="Label" parent="."]
