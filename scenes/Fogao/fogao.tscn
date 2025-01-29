@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://c5oxu6cckfg6r"]
 
 [ext_resource type="Script" path="res://scenes/Fogao/fogao.gd" id="1_u358w"]
-[ext_resource type="Texture2D" uid="uid://i8fn2y15vvcx" path="res://resources/sprites/oven.png" id="2_2sik2"]
+[ext_resource type="Texture2D" uid="uid://dh61w3d0smg05" path="res://resources/sprites/oven.webp" id="2_cinbt"]
 [ext_resource type="Script" path="res://components/draggable.gd" id="2_h16bj"]
 [ext_resource type="PackedScene" uid="uid://wej27gmwpqj3" path="res://scenes/SpriteFood/SpriteFood.tscn" id="3_gv3ho"]
 [ext_resource type="Script" path="res://components/dropable.gd" id="3_vetcc"]
@@ -20,9 +20,9 @@ autostart = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 modulate = Color(1, 0.356863, 0.262745, 1)
-position = Vector2(4.00001, -0.499999)
-scale = Vector2(0.380952, 0.231441)
-texture = ExtResource("2_2sik2")
+position = Vector2(10, -2)
+scale = Vector2(0.77868, 0.538709)
+texture = ExtResource("2_cinbt")
 
 [node name="SpriteFood" parent="." node_paths=PackedStringArray("food") instance=ExtResource("3_gv3ho")]
 food = NodePath("../Food")

@@ -1,12 +1,12 @@
 [gd_resource type="Resource" script_class="IngredientStats" load_steps=3 format=3 uid="uid://dk4tlri6e884x"]
 
 [ext_resource type="Script" path="res://components/ingredient_stats.gd" id="1_0gyqy"]
-[ext_resource type="Texture2D" uid="uid://bp5ncou4qmih" path="res://resources/sprites/queijo.png" id="2_ofnfs"]
+[ext_resource type="Texture2D" uid="uid://bapoutbb4gxc2" path="res://resources/sprites/ingredientes/Cheese.png" id="2_ytb7y"]
 
 [resource]
 script = ExtResource("1_0gyqy")
 name = "Quejo"
-texture = ExtResource("2_ofnfs")
+texture = ExtResource("2_ytb7y")
 raw_tasty = 5
 cooking_tasty = Array[Vector2]([Vector2(5, 8), Vector2(10, 5), Vector2(14, 1), Vector2(20, -5)])
 calories = 8
