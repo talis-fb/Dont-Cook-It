@@ -27,6 +27,8 @@ extends Resource
 @export var fibres: int
 @export var has_lactose: bool
 @export var has_gluten: bool
+@export var is_vegan: bool = false
+@export var cholesterol_level: int = 0
 
 func to_food_entity() -> Food:
 	var ingredient = Ingredient.new()
