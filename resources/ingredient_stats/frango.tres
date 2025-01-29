@@ -1,12 +1,12 @@
 [gd_resource type="Resource" script_class="IngredientStats" load_steps=3 format=3 uid="uid://dlxsb0rhi2lbx"]
 
 [ext_resource type="Script" path="res://components/ingredient_stats.gd" id="1_4yve6"]
-[ext_resource type="Texture2D" uid="uid://b1vrlyxtkuqie" path="res://resources/sprites/frango.png" id="2_wr4p1"]
+[ext_resource type="Texture2D" uid="uid://dswrs1pm7kjbc" path="res://resources/sprites/ingredientes/Chicken.png" id="2_vruxu"]
 
 [resource]
 script = ExtResource("1_4yve6")
 name = "Frango"
-texture = ExtResource("2_wr4p1")
+texture = ExtResource("2_vruxu")
 raw_tasty = -25
 cooking_tasty = Array[Vector2]([Vector2(5, -4), Vector2(10, 3), Vector2(20, 13), Vector2(30, 15), Vector2(35, 13), Vector2(45, 4), Vector2(60, -13)])
 calories = 10

@@ -1,5 +1,6 @@
-[gd_scene load_steps=16 format=3 uid="uid://bw8nkwe3gtfl2"]
+[gd_scene load_steps=17 format=3 uid="uid://bw8nkwe3gtfl2"]
 
+[ext_resource type="Texture2D" uid="uid://boohk3cyd235f" path="res://resources/sprites/ingredientes/kitchen.png" id="1_27ii6"]
 [ext_resource type="PackedScene" uid="uid://br5tdebhjvjti" path="res://scenes/Spawner_Food/creator_ingredient.tscn" id="1_083bv"]
 [ext_resource type="Script" path="res://scenes/Main/points.gd" id="1_qiwkr"]
 [ext_resource type="PackedScene" uid="uid://bppbohwhxxnnt" path="res://scenes/DraggingCursor/dragging.tscn" id="3_4vlif"]
@@ -22,6 +23,11 @@ outline_size = 4
 outline_color = Color(0, 0, 0, 1)
 
 [node name="Main" type="Node2D"]
+
+[node name="scenario" type="Sprite2D" parent="."]
+modulate = Color(0.255659, 0.255659, 0.255659, 1)
+position = Vector2(611, 325)
+texture = ExtResource("1_27ii6")
 
 [node name="Points2" type="Node2D" parent="."]
 position = Vector2(1085, 13)
