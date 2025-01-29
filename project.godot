@@ -18,6 +18,7 @@ config/icon="res://resources/sprites/icon.svg"
 [autoload]
 
 GlobalDragging="*res://autoload/global_dragging.gd"
+ScoreManager="*res://autoload/ScoreManager.gd"
 
 [input]
 
